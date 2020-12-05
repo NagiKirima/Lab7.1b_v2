@@ -2,8 +2,9 @@
 #include <string>
 using namespace std;
 
-int SizeCheck(int size)
+int SizeCheck()
 {
+	int size;
 	while (!(cin >> size) || (cin.peek() != '\n') || size < 1)
 	{
 		cin.clear();
@@ -47,9 +48,8 @@ int main()
 
 	int slength;
 	cout << "¬ведите длину 1 строки:\t";
-	cin >> slength;
 	cout << endl;
-	slength = SizeCheck(slength);
+	slength = SizeCheck();
 	char* s = new char[slength];
 	FillArray(s, slength);
 
