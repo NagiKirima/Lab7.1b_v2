@@ -36,8 +36,9 @@ void FillArray(char* s, int length)
 	cout << endl << "Заполните строку поэлементно:" << endl;
 	for (int i = 0; i < length; i++)
 	{
-		cout << "Введите " << i << "-ый элемент строки \t" << endl;
+		cout << "Введите " << i+1 << "-ый элемент строки: \t";
 		cin >> s[i];
+		cout << endl;
 	}
 }
 
@@ -48,7 +49,6 @@ int main()
 
 	int slength;
 	cout << "Введите длину 1 строки:\t";
-	cout << endl;
 	slength = SizeCheck();
 	char* s = new char[slength];
 	FillArray(s, slength);
